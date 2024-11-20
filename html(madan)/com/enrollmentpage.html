@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Enrollment Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:#5e5e98;
+            padding: 20px;
+
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 60%;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Employee Enrollment Form</h1>
+
+<form action="/submit" method="POST">
+    <!-- Personal Information Section -->
+    <div class="form-group">
+        <label for="employee_name">Full Name:</label>
+        <input type="text" id="employee_name" name="employee_name" required>
+    </div>
+
+    <div class="form-group">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <!-- Employment Details Section -->
+    <div class="form-group">
+        <label for="job_title">Job Title:</label>
+        <input type="text" id="job_title" name="job_title" required>
+    </div>
+
+    <div class="form-group">
+        <label for="start_date">Start Date:</label>
+        <input type="date" id="start_date" name="start_date" required>
+    </div>
+
+    <!-- Benefits Enrollment Section -->
+    <div class="form-group">
+        <label for="health_insurance">Health Insurance:</label><br>
+        <input type="radio" id="health_yes" name="health_insurance" value="yes">
+        <label for="health_yes">Yes</label>
+        <input type="radio" id="health_no" name="health_insurance" value="no">
+        <label for="health_no">No</label>
+    </div>
+
+    <div class="form-group">
+        <label for="retirement_plan">Retirement Plan (e.g., 401(k)):</label><br>
+        <input type="checkbox" id="retirement" name="retirement_plan" value="yes">
+        <label for="retirement">Enroll in Retirement Plan</label>
+    </div>
+
+    <!-- Tax and Payroll Information -->
+    <div class="form-group">
+        <label for="tax_form">Tax Form (W-4):</label>
+        <input type="file" id="tax_form" name="tax_form" accept=".pdf,.jpg,.png" required>
+    </div>
+
+    <!-- System Access and IT Setup -->
+    <div class="form-group">
+        <label for="email_setup">Email Setup:</label>
+        <input type="checkbox" id="email_setup" name="email_setup" checked>
+        <label for="email_setup">Set up company email</label>
+    </div>
+
+    <div class="form-group">
+        <label for="it_access">IT Equipment:</label>
+        <select id="it_access" name="it_access">
+            <option value="laptop">Laptop</option>
+            <option value="desktop">Desktop</option>
+            <option value="tablet">Tablet</option>
+        </select>
+    </div>
+
+    <!-- Signature or Acknowledgment -->
+    <div class="form-group">
+        <label for="acknowledgment">I acknowledge the terms and conditions:</label><br>
+        <input type="checkbox" id="acknowledgment" name="acknowledgment" required>
+        <label for="acknowledgment">Yes, I agree</label>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group">
+        <button type="submit">Submit Enrollment</button>
+    </div>
+</form>
+
+</body>
+</html>
